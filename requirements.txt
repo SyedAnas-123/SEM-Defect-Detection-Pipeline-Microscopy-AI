@@ -1,0 +1,13 @@
+# Web App Dependencies
+streamlit
+pandas
+Pillow
+ultralytics
+torch
+torchvision
+
+# Windows DLL Compatibility Overrides
+# These specific versions prevent Windows Defender/AppLocker from blocking the DLLs
+numpy<2.0.0
+opencv-python<4.10
+pyarrow==14.0.1

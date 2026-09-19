@@ -1,0 +1,38 @@
+project_name: "SEM Defect Detection Two-Stage Framework"
+seed: 42
+
+paths:
+  original_dataset: "c:\\Users\\syed mohammad anas\\Desktop\\sir_khurram_project\\dataset_syedanas"
+  yolo_single_class_dataset: "c:\\Users\\syed mohammad anas\\Desktop\\sir_khurram_project\\sem_defect_project\\datasets\\dataset_yolo_single_class"
+  classifier_crops: "c:\\Users\\syed mohammad anas\\Desktop\\sir_khurram_project\\sem_defect_project\\datasets\\classifier_crops"
+  runs_dir: "c:\\Users\\syed mohammad anas\\Desktop\\sir_khurram_project\\sem_defect_project\\runs"
+  models_dir: "c:\\Users\\syed mohammad anas\\Desktop\\sir_khurram_project\\sem_defect_project\\src\\models"
+
+yolo:
+  img_size: 512
+  batch_size: 16
+  epochs: 100
+  patience: 20
+  optimizer: "AdamW"
+  lr0: 0.001
+  conf_thresh: 0.25
+  iou_thresh: 0.45
+
+classifier:
+  models_to_train:
+    - "resnet50"
+    - "efficientnet_b0"
+  img_size: 224
+  batch_size: 32
+  epochs: 50
+  patience: 10
+  optimizer: "Adam"
+  lr: 0.0001
+  backbone_lr: 0.00001
+
+end_to_end:
+  yolo_checkpoint_dir: "runs/detect/EXP-10-YOLOv12m-640-200/weights" # Updated to Medium Model
+  resnet_checkpoint_dir: "runs/classify/EXP-11-RunB2" # Optimized weights from Phase 8
+  iou_thresh: 0.50
+  padding_factor: 0.10
+  yolo_conf_thresh: 0.15 # Optimized from Phase 7 EXP-10 Threshold Sweep

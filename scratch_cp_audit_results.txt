@@ -1,0 +1,1 @@
+Augmented Images Created: 539\nTiny Defects Pasted: 1081\nTrain Images: 1585\nTrain Boxes: 8124\nValid Images: 31\nTest Images: 30\nErrors: 0\n

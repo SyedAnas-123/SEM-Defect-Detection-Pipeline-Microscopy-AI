@@ -1,0 +1,7 @@
+slice_height: 320
+slice_width: 320
+overlap_height_ratio: 0.2
+overlap_width_ratio: 0.2
+confidence_threshold: 0.15
+nms_iou_threshold: 0.50
+model_path: "runs/detect/runs/detect/EXP-10-YOLOv12m-640-200/weights/best.pt"

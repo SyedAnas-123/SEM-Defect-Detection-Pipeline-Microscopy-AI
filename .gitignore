@@ -1,0 +1,31 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Streamlit
+.streamlit/
+
+# Datasets (Do NOT push huge datasets to GitHub, it will block your upload!)
+dataset_syedanas/
+PEMDefect-1107/
+Carinthia SEM Defect Dataset*
+dataset_yolo*/
+*.zip
+*.tar.gz
+
+# Ignore log files
+*.log
