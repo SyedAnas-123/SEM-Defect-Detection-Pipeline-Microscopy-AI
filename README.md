@@ -50,9 +50,20 @@ sem_defect_project/
 
 Follow these simple steps to download the requirements and run the interactive web application on your local machine.
 
-### 1. Install Dependencies
-Open your terminal/command prompt in the root of this project and run:
+### 1. Set Up Virtual Environment & Install Dependencies
+It is highly recommended to use a Python virtual environment to avoid conflicts. Open your terminal in the root of this project and run:
+
+**For Windows:**
+```powershell
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+**For macOS/Linux:**
 ```bash
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 *(Note: The `requirements.txt` specifically uses PyTorch `2.2.2` and NumPy `<2.0` to ensure maximum compatibility and avoid Windows DLL blocking issues).*
